@@ -135,7 +135,7 @@ public class MessageCaptor extends AccessibilityService {
      *
      * 聊天窗口中的红包都存在"领取红包"一词,因此可根据该词查找红包
      *
-     * @param node
+     * @param
      */
     public AccessibilityNodeInfo recycle(AccessibilityNodeInfo nodeInfo) {
 //        AccessibilityNodeInfo nodeInfo = getRootInActiveWindow();
@@ -148,35 +148,37 @@ public class MessageCaptor extends AccessibilityService {
             list = nodeInfo.findAccessibilityNodeInfosByText(ENVELOPE_TEXT_KEY);
             for (AccessibilityNodeInfo n : list) {
                 Log.i(TAG, "-->微信红包:" + n);
-                n.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                break;
+                //n.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+                return null;
             }
         } else {
             //最新的红包领起
             for (int i = list.size() - 1; i >= 0; i--) {
-                AccessibilityNodeInfo parent = list.get(i).getParent();
-                Log.i(TAG, "-->领取红包:" + parent);
-                if (parent != null) {
-                    parent.performAction(AccessibilityNodeInfo.ACTION_CLICK);
-                    break;
-                }
+                return list.get(i);
+//                AccessibilityNodeInfo parent = list.get(i).getParent();
+//                Log.i(TAG, "-->领取红包:" + parent);
+//                if (parent != null) {
+//                    parent.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+//                    break;
+//                }
             }
         }
 
 
-        if (node.getChildCount() == 0) {
-            if (node.getText() != null) {
-                if ("领取红包".equals(node.getText().toString())) {
-                    return node;
-                }
-            }
-        } else {
-            for (int i = 0; i < node.getChildCount(); i++) {
-                if (node.getChild(i) != null) {
-                    recycle(node.getChild(i));
-                }
-            }
-        }
-        return node;
+//        if (node.getChildCount() == 0) {
+//            if (node.getText() != null) {
+//                if ("领取红包".equals(node.getText().toString())) {
+//                    return node;
+//                }
+//            }
+//        } else {
+//            for (int i = 0; i < node.getChildCount(); i++) {
+//                if (node.getChild(i) != null) {
+//                    recycle(node.getChild(i));
+//                }
+//            }
+//        }
+//        return node;
+        return null;
     }
 }
