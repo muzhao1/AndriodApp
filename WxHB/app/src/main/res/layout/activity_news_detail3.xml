@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:id="@+id/new_detail_AppBarLayout"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+        android:id="@+id/new_detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppTheme"
+        android:layout_below="@+id/new_detail_AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tv_new_body"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/sn_16sp"
+            />
+    </ScrollView>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp">-->
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="191dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:gravity="center">-->
+
+
+            <!--<ImageView-->
+                <!--android:layout_width="71dp"-->
+                <!--android:layout_height="71dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/login_logo" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="65dp"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="@string/app_name"-->
+                <!--android:id="@+id/textView2"-->
+                <!--android:layout_gravity="bottom|center_horizontal"-->
+                <!--android:gravity="center_vertical" />-->
+
+        <!--</FrameLayout>-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/username_layout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--android:gravity="center">-->
+
+            <!--&lt;!&ndash;android:paddingRight="60dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+            <!--<com.example.zrj.myapplication.custom.EditTextWithDeleteButton-->
+                <!--android:id="@+id/et_username"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:inputType="number"-->
+                <!--android:hint="手机号码"-->
+                <!--android:maxLength="20"-->
+                <!--android:paddingLeft="55dp"-->
+                <!--android:paddingRight="10dp">-->
+
+            <!--</com.example.zrj.myapplication.custom.EditTextWithDeleteButton>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="28dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_gravity="left|center_vertical"-->
+                <!--android:background="@drawable/username"-->
+                <!--android:visibility="visible" />-->
+
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btn_username_clear"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="23dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="23dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@drawable/button_clear"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="right|center_vertical"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginRight="10dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:visibility="invisible" />&ndash;&gt;-->
+        <!--</FrameLayout>-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/usercode_layout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/username_layout"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:gravity="center">-->
+
+            <!--&lt;!&ndash;&ndash;&gt;-->
+            <!--<com.example.zrj.myapplication.custom.EditTextWithDeleteButton-->
+                <!--android:id="@+id/et_password"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:hint="密码"-->
+                <!--android:inputType="textPassword"-->
+
+                <!--android:maxLength="20"-->
+                <!--android:paddingLeft="55dp"-->
+                <!--android:paddingRight="40dp">-->
+            <!--</com.example.zrj.myapplication.custom.EditTextWithDeleteButton>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="28dp"-->
+                <!--android:layout_marginLeft="7dp"-->
+                <!--android:layout_gravity="left|center_vertical"-->
+                <!--android:background="@drawable/password" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_pwd_eye"-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@drawable/eye"-->
+                <!--android:layout_gravity="right|center_vertical"-->
+                <!--android:layout_marginRight="10dp" />-->
+        <!--</FrameLayout>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_login"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_below="@id/usercode_layout"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:background="@drawable/shape"-->
+            <!--android:gravity="center"-->
+            <!--android:text="登  录"-->
+            <!--android:enabled="true" />-->
+
+        <!--<FrameLayout android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--<Button-->
+                <!--android:id="@+id/register"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_below="@id/btn_login"-->
+                <!--android:background="#00000000"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:text="注册"-->
+                <!--android:textSize="16sp"-->
+                <!--android:visibility="visible" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/login_error"-->
+                <!--android:layout_width="77dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#00000000"-->
+                <!--android:text="忘记密码"-->
+                <!--android:textSize="16sp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_gravity="right|top" />-->
+
+
+        <!--</FrameLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+</RelativeLayout>
+
